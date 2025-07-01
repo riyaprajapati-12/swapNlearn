@@ -1,0 +1,44 @@
+# ==========================
+# Common Node.js (backend + frontend)
+# ==========================
+
+# Dependency folders
+frontend/node_modules/
+backend/node_modules/
+
+# Environment variable files (very important!)
+frontend/.env
+backend/.env
+
+# Build output
+frontend/build/
+backend/build/
+frontend/dist/
+backend/dist/
+
+# Logs
+*.log
+
+# IDE settings
+.vscode/
+.idea/
+
+# System-specific files
+.DS_Store
+Thumbs.db
+
+# Caches and temp
+frontend/.cache/
+backend/.cache/
+frontend/.next/
+backend/.next/
+frontend/.vite/
+backend/.vite/
+
+# Coverage reports
+coverage/
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
