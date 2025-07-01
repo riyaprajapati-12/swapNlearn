@@ -1,6 +1,6 @@
 //swapNlearn123
 require("dotenv").config();
-const config = require("./config.json");
+
 const mongoose = require("mongoose");
 const express = require("express");
 const cors = require("cors");
