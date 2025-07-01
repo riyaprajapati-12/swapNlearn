@@ -115,7 +115,7 @@ io.on("connection", (socket) => {
 // Connect to MongoDB and start server
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
-    server.listen(8081, () => {
+    server.listen(process.env.PORT, () => {
       console.log("🚀 Server is running with Socket.IO on port 8081");
     });
   })
