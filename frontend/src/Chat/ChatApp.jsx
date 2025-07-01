@@ -27,8 +27,9 @@ const ChatApp = () => {
     const decoded = JSON.parse(atob(token.split(".")[1]));
     userId.current = decoded.id;
 
-    const socket = io("http://localhost:8081", {
+    const socket = io("https://swapnlearn.onrender.com", {
       query: { token },
+      transports: ["websocket"],
     });
 
     setSocketInstance(socket);
