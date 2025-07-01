@@ -31,7 +31,8 @@ const io = new Server(server, {
 
 // Middleware
 app.use(express.json());
-app.use(cors({ origin: "*" }));
+app.use(cors({ origin: "https://swapnlearn-1.onrender.com", 
+  credentials: true }));
 
 // Route handlers
 app.use("/user", userRouter);
