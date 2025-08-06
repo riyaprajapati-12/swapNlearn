@@ -14,7 +14,8 @@
   "devDependencies": {},
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "build": "cd ../frontend && npm install && npm run build"
   },
   "author": "swapNlearn",
   "license": "ISC",
