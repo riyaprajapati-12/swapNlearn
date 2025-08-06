@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 import axiosInstance from "../../Utils/axiosInstance";
 import EditUserProfileForm from "../../components/EditUserProfileForm";
+import { Link } from 'react-router-dom';
 
 const NewProfilePage = () => {
   const [profileData, setProfileData] = useState(null);
@@ -33,13 +34,13 @@ const NewProfilePage = () => {
       {/* Left Sidebar */}
       <div className="w-1/4 bg-gradient-to-b from-orange-600 to-orange-400 shadow-2xl flex flex-col justify-between p-6">
         <div>
-          <a
-            href="/dashboard"
-            className="flex items-center gap-3 text-white hover:text-black transition-colors mb-8"
-          >
-            <FaHome className="text-xl" />
-            <span className="text-md font-semibold">Dashboard</span>
-          </a>
+         <Link
+  to="/dashboard"
+  className="flex items-center gap-3 text-white hover:text-black transition-colors mb-8"
+>
+  <FaHome className="text-xl" />
+  <span className="text-md font-semibold">Dashboard</span>
+</Link>
 
           <div className="flex flex-col items-center text-center">
             <div className="w-32 h-32 rounded-full bg-white/10 border-4 border-white shadow-md flex items-center justify-center mb-4">
