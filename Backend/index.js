@@ -123,3 +123,13 @@ mongoose.connect(process.env.MONGO_URI)
   .catch((err) => {
     console.log("❌ Database connection error:", err);
   });
+
+  const path = require("path");
+
+// Serve Vite build static files
+app.use(express.static(path.join(__dirname, "..", "frontend", "dist")));
+
+// Catch-all route: React index.html for unknown routes
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "frontend", "dist", "index.html"));
+});
