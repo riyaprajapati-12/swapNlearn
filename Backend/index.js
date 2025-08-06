@@ -126,10 +126,3 @@ mongoose.connect(process.env.MONGO_URI)
 
   const path = require("path");
 
-// Serve Vite build static files
-app.use(express.static(path.join(__dirname, "..", "frontend", "dist")));
-
-// Catch-all route: React index.html for unknown routes
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "frontend", "dist", "index.html"));
-});
